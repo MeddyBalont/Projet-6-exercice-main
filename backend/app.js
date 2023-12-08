@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const stuffRoutes = require('./routes/stuff');
-const userRoutes = require('./routes/User');
+const userRoutes = require('./routes/user');
 const app = express();
 
 app.use((req, res, next) => {
@@ -23,5 +24,6 @@ app.use(express.json());
 app.use('/api/stuff', bodyParser.json());
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 module.exports = app;
