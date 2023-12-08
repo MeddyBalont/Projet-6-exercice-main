@@ -14,16 +14,18 @@ app.use((req, res, next) => {
   next();
 });  
 
-mongoose.connect('mongodb+srv://Meddy971:Fairytail97129@cluster0.5dbv0vg.mongodb.net/?retryWrites=true&w=majority')
-  //{ useNewUrlParser: true,
-    //useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://Meddy971:Fairytail97129@cluster0.5dbv0vg.mongodb.net/?retryWrites=true&w=majority',
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 app.use(express.json());
 app.use('/api/stuff', bodyParser.json());
+
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
+
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 module.exports = app;

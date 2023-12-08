@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 
 const jwt = require('jsonwebtoken');
 
-const User = require('../models/User');
+const User = require('../models/user');
 
 exports.signup = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
@@ -39,7 +39,9 @@ exports.signup = (req, res, next) => {
                     });
                 })
                 .catch(error => res.status(500).json({ error }));
+                console.log("oui");
         })
         .catch(error => res.status(500).json({ error }));
+        console.log("oui");
  };
 

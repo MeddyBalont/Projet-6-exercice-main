@@ -1,6 +1,7 @@
 const Thing = require('../models/thing');
 
-exports.createThing = (req, res, next) => {
+exports.createThing = (req, res) => {
+  console.log("oui")
   const thingObject = JSON.parse(req.body.thing);
    delete thingObject._id;
    delete thingObject._userId;
@@ -13,6 +14,7 @@ exports.createThing = (req, res, next) => {
    thing.save()
    .then(() => { res.status(201).json({message: 'Objet enregistré !'})})
    .catch(error => { res.status(400).json( { error })})
+   console.log("oui");
 
 };
 
