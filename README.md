@@ -1,11 +1,11 @@
 <!-- ABOUT THE PROJECT -->
-## 🧐 About The Project <a name = "about-the-project"></a>
-
-[![Piquante]
+##  About The Project <a name = "about-the-project"></a>
 
 L’entreprise souhaite désormais développer une application d’évaluation de ses sauces piquantes, appelée “Piquante”. Même si l’application deviendra peut-être un magasin en ligne dans un futur proche, Sophie, la product owner de So Pekocko, a décidé que le MVP du projet sera une application web permettant aux utilisateurs d’ajouter leurs sauces préférées et de liker ou disliker les sauces ajoutées par les autres utilisateurs.
 
+
 #### CONTRAINTES
+
 Utiliser les bonnes pratiques de l'OWASP pour sécuriser l'API
 Les données utilisateur doivent être protégées côté API et base de donnée grâce à des méthodes de masquage.
 Projet hébergé par un serveur Node.js.
@@ -13,7 +13,6 @@ Base de données sous MongoDB et utilisation du framework Express.
 Utiliser un plugin Mongoose pour signaler toute erreur de la base de données.
 
 #### Sécurité:
-
 * L’API doit respecter le RGPD et les standards OWASP.
 * Le mot de passe des utilisateurs doit être chiffré.
 * 2 types de droits administrateur à la base de données doivent être définis : un accès pour supprimer ou modifier des tables, et un accès pour éditer le contenu de la base de données.
@@ -26,7 +25,7 @@ Utiliser un plugin Mongoose pour signaler toute erreur de la base de données.
 
 
 
-### 🎯 Objectives <a name = "objectives"></a>
+###  Objectives <a name = "objectives"></a>
 
 * Implémenter un modèle logique de données conformément à la réglementation
 * Stocker des données de manière sécurisée
@@ -34,7 +33,7 @@ Utiliser un plugin Mongoose pour signaler toute erreur de la base de données.
 
 
 
-### ⛏️ Built With <a name = "built-with"></a>
+###  Built With <a name = "built-with"></a>
 
 -Backend
 
